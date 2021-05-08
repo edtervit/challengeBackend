@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 // import controllers
 use App\Http\Controllers\SportController;
 use App\Http\Controllers\LeagueController;
+use App\Http\Controllers\TeamController;
 
 
 /*
@@ -28,6 +29,9 @@ Route::apiResource('sports', SportController::class);
 
 //end points for the leagues controller
 Route::apiResource('league', LeagueController::class);
+
+//end points for the teams controller
+Route::apiResource('teams', TeamController::class);
 
 //create endpoint that runs the fetch method to import sports data from the api in the google doc
 Route::get('/fetchSports', [SportController::class, 'fetch']);

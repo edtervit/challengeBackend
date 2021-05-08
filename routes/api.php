@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 // import controllers
 use App\Http\Controllers\SportController;
+use App\Http\Controllers\LeagueController;
 
 
 /*
@@ -24,6 +25,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //end points for the sports controller
 Route::apiResource('sports', SportController::class);
+
+//end points for the leagues controller
+Route::apiResource('league', LeagueController::class);
 
 //create endpoint that runs the fetch method to import sports data from the api in the google doc
 Route::get('/fetchSports', [SportController::class, 'fetch']);

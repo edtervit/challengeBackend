@@ -22,4 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//end points for the sports controller
 Route::apiResource('sports', SportController::class);
+
+//create endpoint that runs the fetch method to import sports data from the api in the google doc
+Route::get('/fetchSports', [SportController::class, 'fetch']);

@@ -22,15 +22,15 @@ class CreateTeamsTable extends Migration
             $table->integer('teamID');
             $table->string('leagueName');
             $table->integer('leagueID');
-            $table->integer('rank');
-            $table->integer('goalsFor');
-            $table->integer('goalsAgainst');
-            $table->integer('goalsDiff');
-            $table->integer('wins');
-            $table->integer('losses');
-            $table->integer('draws');
-            $table->integer('points');
-            //make these nullable so doesn't fail on initial import of teams but can be updated later when importing team details 
+            //not all sports/leagues have this data
+            $table->integer('rank')->nullable();
+            $table->integer('goalsFor')->nullable();
+            $table->integer('goalsAgainst')->nullable();
+            $table->integer('goalsDiff')->nullable();
+            $table->integer('wins')->nullable();
+            $table->integer('losses')->nullable();
+            $table->integer('draws')->nullable();
+            $table->integer('points')->nullable();
             $table->string('stadiumName')->nullable();
             $table->string('website')->nullable();
             $table->string('desc')->nullable();

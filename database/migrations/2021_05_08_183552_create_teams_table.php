@@ -33,7 +33,7 @@ class CreateTeamsTable extends Migration
             $table->integer('points')->nullable();
             $table->string('stadiumName')->nullable();
             $table->string('website')->nullable();
-            $table->string('desc')->nullable();
+            $table->longText('desc')->nullable();
 
 
             $table->timestamps();

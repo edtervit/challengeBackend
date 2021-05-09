@@ -38,3 +38,7 @@ Route::get('/fetchSports', [SportController::class, 'fetch']);
 
 //create endpoint that runs the fetch method to import leagues data from the api in the google doc
 Route::get('/fetchLeagues', [LeagueController::class, 'fetch']);
+
+
+//create endpoint that runs the fetch method to import teams data from the api in the google doc
+Route::get('/fetchTeams', [TeamController::class, 'fetch']);
